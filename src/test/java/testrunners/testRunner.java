@@ -8,7 +8,6 @@ import org.testng.annotations.Parameters;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import com.qa.util.ConfigReader;
 	
 //import io.cucumber.junit.CucumberOptions;
 //import io.cucumber.junit.Cucumber;
@@ -29,13 +28,6 @@ public class testRunner extends AbstractTestNGCucumberTests
 
 		return super.scenarios();
 	}
-	@BeforeTest
-    @Parameters({"browser"})
-    public void defineBrowser(String browser) throws Throwable {
-		ConfigReader.loadConfig();
-		ConfigReader.setBrowserType(browser);
-		System.out.println(" in runner " + browser);
-
 }
 	/*@BeforeClass
 	public static void beforeClass()
@@ -45,4 +37,4 @@ public class testRunner extends AbstractTestNGCucumberTests
 	public static void afterClass()
 		{
 		}*/
-}
+
