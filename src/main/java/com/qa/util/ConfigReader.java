@@ -228,7 +228,7 @@ public class ConfigReader
 				throw new RuntimeException(
 						"graphrepresentations url is not specified in the Configuration.properties file.");
 		}
-			public static void setBrowserType(String browser) {
+			/*public static void setBrowserType(String browser) {
 				browserType = browser;
 			}
 			public static String getBrowserType() throws Throwable {
@@ -252,7 +252,7 @@ public class ConfigReader
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 					throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
-				}
+				}*/
 		}
 	/* this method is used to load the properties from config.properties file*/
 
@@ -277,4 +277,4 @@ public class ConfigReader
 
 	}*/
 
-}
+

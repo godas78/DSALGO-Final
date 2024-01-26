@@ -15,26 +15,27 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 		         features={"src/test/resources/AppFeatures"},
-		         glue= {"stepDefinitions","AppHooks", "rerun:target/rerun.txt"},
+		         glue= {"stepDefinitions","AppHooks"},
 		         monochrome = false,
 		 		 tags = ""
 		         )
 
-public class testRunner extends AbstractTestNGCucumberTests
- {
+public class testRunner extends AbstractTestNGCucumberTests {
+ /*{
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 
 		return super.scenarios();
 	}
-}
-	/*@BeforeClass
+}*/
+	@BeforeClass
 	public static void beforeClass()
 		{
 		}
 	@AfterClass
 	public static void afterClass()
 		{
-		}*/
+		}
+	}
 
