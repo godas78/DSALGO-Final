@@ -19,6 +19,7 @@ public class ConfigReader
 	private static Properties prop;
 	private static WebDriver driver = DriverFactory.getDriver();
 	private final static String propertyFilePath = "./src/test/resources/config/config.properties";
+	private static String browserType = null;
 	//private DriverFactory driverFactory;
 	//driverFactory= new DriverFactory();
 	//This method is used to load the properties from config.properties file
@@ -226,6 +227,32 @@ public class ConfigReader
 			else
 				throw new RuntimeException(
 						"graphrepresentations url is not specified in the Configuration.properties file.");
+		}
+			public static void setBrowserType(String browser) {
+				browserType = browser;
+			}
+			public static String getBrowserType() throws Throwable {
+				if (browserType != null)
+					return browserType;
+				else
+					throw new RuntimeException("browser not specified in the testng.xml");
+			}
+			public static void loadConfig() throws Throwable {
+
+				try {
+					FileInputStream fis;
+					fis = new FileInputStream(propertyFilePath);
+					prop = new Properties();
+					try {
+						prop.load(fis);
+						fis.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+					throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
+				}
 		}
 	/* this method is used to load the properties from config.properties file*/
 

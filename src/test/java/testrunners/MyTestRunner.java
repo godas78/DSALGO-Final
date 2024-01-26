@@ -17,8 +17,9 @@ import org.testng.annotations.DataProvider;
 				"junit:target/cucumber.xml",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"rerun:target/rerun.txt",
 				},
-		monochrome = true,
+		monochrome = false,
 		publish = true,
 		tags = ""
 		)
