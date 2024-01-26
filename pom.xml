@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>Dsalgo_cucumber1</groupId>
-	<artifactId>Dsalgo_cucumber1</artifactId>
+	<groupId>Dsalgo_proj_final</groupId>
+	<artifactId>Dsalgo_proj_final</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>Dsalgo_cucumber1</name>
+	<name>Dsalgo_proj_final</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -151,6 +151,17 @@
 			<artifactId>log4j-api</artifactId>
 			<version>3.0.0-alpha1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-failsafe-plugin</artifactId>
+			<version>3.2.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<version>3.2.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -202,7 +213,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>Dsalgo_cucumber1</projectName>
+							<projectName>Dsalgo_proj_final</projectName>
 							<!-- optional, per documentation set this to
 								"true" to bypass generation of Cucumber Reports
 								entirely, defaults to false if not specified -->
