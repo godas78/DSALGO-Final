@@ -1,6 +1,7 @@
 stepDefinitions\DataStructureSteps.class
 stepDefinitions\LoginSteps.class
 testrunners\MyTestRunner.class
+testrunners\testRunner.class
 stepDefinitions\TreeSteps.class
 stepDefinitions\Portalsteps.class
 stepDefinitions\StackSteps.class
